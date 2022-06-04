@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atin's Personal Website</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <style>
+        .div1{
+           background-color: #FAF0D7
+
+        }
+        .div2{
+           background-color: #FBF8F1
+
+        }
+        .cloud{
+           position: absolute;
+           left: 160px;
+           top: 280px;
+           width: 150px;
+           height: 45px;
+
+
+           z-index: 980;
+       }
+       .cloud1{
+           position: absolute;
+           left: 920px;
+           top: 150px;
+           width: 150px;
+           height: 45px;
+
+
+           z-index: 980;
+       }
+        .sun{
+           position: absolute;
+           left: 1090px;
+           top: 50px;
+           width: 150px;
+           height: 45px;
+           background-color:#F7ECDE;
+
+           z-index: 980;
+       }
+        #title .left-cloud {
+           left: 2em;
+           bottom: 5em;
+       }
+        .transition {
+           -webkit-transition: all .5s ease-in-out;
+           transition: all .5s ease-in-out;
+       }
+       hr{
+
+           height:3px;
+           border-style:none;
+           border-top-style:dotted;
+           width:10%;
+           color:grey;
+           border-width:8px;
+       }
+      .p1 {
+           position: absolute;
+           left: 610px;
+           top: 1825px;
+      }
+      .p2{
+           position: absolute;
+           left: 610px;
+           top: 1760px;
+      }
+      .p3{
+           position: absolute;
+           left: 275px;
+           top: 2000px;
+      }
+      .p4{
+           position: absolute;
+           left: 285px;
+           top: 2065px;
+      }
+       .main-btn {
+           font-size: .8em;
+           text-align: center;
+           display: block;
+           position: relative;
+           background: #45b29a;
+           padding: 0.75em 2em 0.75em 3.5em;
+           color: #1b7f69;
+           text-decoration: none;
+           margin: 1.5em 0 0;
+           border-radius: 3px;
+           -webkit-border-radius: 3px;
+           -moz-border-radius: 3px;
+           font-weight: 400;
+           border: 0;
+           font-family: brandon-grotesque,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+           text-transform: uppercase;
+      }
+      .btn-hldr {
+           text-align: center;
+      }
+      i.email {
+           position: absolute;
+           height: 15px;
+           width: 24px;
+           left: 11%;
+           top: 33%;
+           background-image: url(/web/20180901170713im_/http://seanhalpin.io/assets/img/content/home/contact/mail.png);
+      }
+      footer {
+           background: #c5ded7;
+           padding: 3em 0;
+      }
+      .container {
+          margin-right: auto;
+          margin-left: auto;
+          padding-left: 15px;
+          padding-right: 15px;
+      }
+      .row {
+          margin-left: -15px;
+          margin-right: -15px;
+      }
+      .col-md-12 {
+          width: 100%;
+      }
+       .footer-list {
+          overflow: hidden;
+          margin: 0 auto;
+          max-width: 600px;
+          padding: 0;
+       }
+       .footer-list a {
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          color: #45b29a;
+          font-size: 1.5em;
+       }
+       .nav-root {
+          background: #E0EBE8;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          -webkit-transition: all .8s;
+          transition: all .8s;
+       }
+       .col-xs-4 {
+          width: 33.33333333%;
+       }
+       .col-md-4 {
+          width: 33.33333333%;
+       }
+       #header-logo {
+          -webkit-animation: fadeIn .3s ease-in-out;
+          -moz-transition: fadeIn .3s ease-in-out;
+          -o-transition: fadeIn .3s ease-in-out;
+          transition: fadeIn .3s ease-in-out;
+          border-radius: 60px;
+          overflow: hidden;
+          width: 72px;
+          height: 72px;
+          position: relative;
+          margin: 0;
+          padding: 0;
+       }
+       .image-text {
+          background-position: 0 0;
+          background-repeat: no-repeat;
+          display: block;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          text-indent: -9999px;
+       }
+        .mask {
+          background-image: url(/web/20180901170713im_/http://seanhalpin.io/assets/img/content/nav/header-logo-mask.png);
+          position: absolute;
+          height: 72px;
+          width: 72px;
+          z-index: 1000;
+        }
+        .behind {
+          background: #f6f9f8;
+          position: absolute;
+          height: 72px;
+          width: 72px;
+          z-index: 800;
+        }
+        .nav-fixed {
+          -webkit-box-shadow: 0 1px 1px rgb(6 8 8 / 10%);
+          box-shadow: 0 1px 1px rgb(6 8 8 / 10%);
+          opacity: .97;
+          -webkit-transition: all .8s;
+          transition: all .8s;
+          -webkit-backface-visibility: hidden;
+          -webkit-perspective: 1000;
+          overflow: hidden;
+          -webkit-transition-timing-function: ease-in-out;
+          -webkit-transform: translate3d(0,0,0);
+          background: #fff;
+        }
+        .nav-top {
+          opacity: 0;
+          position: fixed;
+          -webkit-transform: translate3d(0,-130px,0);
+          -webkit-transition: .5s;
+          transition: .5s;
+          top: 0;
+        }
+        .headroom--unpinned {
+          top: -200px;
+        }
+         .nav-list {
+           padding-top: 1.5em;
+           padding-left: 0;
+           position: relative;
+           float: right;
+         }
+         .nav-top {
+           opacity: 1;
+           position: relative;
+           width: 100%;
+           z-index: 1000;
+           -webkit-transform: translate3d(0,0,0);
+         }
+         header {
+           background: #e0ebe8;
+           padding: 1em 0;
+         }
+         .a{
+           position: absolute;
+           left: 1160px;
+           top: 10px;
+         }
+         .b{
+           position: absolute;
+           left: 1030px;
+           top: 10px;
+         }
+         .c{
+           position: absolute;
+           left: 900px;
+           top: 10px;
+         }
+
+
+
+    </style>
+</head>
+<body style="margin-top: 0px;">
+<header style="background-color:#FF6363;height: 50px;padding-top: 0px;padding-bottom: 0px;">
+    <p class="c" style="font-size:25px;margin-top: 0px;color:#FF8882;"><a style="color:#FAF3F3;overflow: hidden;text-decoration: none;" href="http://localhost:63342/Personal%20web%20site/Websiteinfo/index.html?_ijt=faf2jbqklu643tgmela4k9dgic&_ij_reload=RELOAD_ON_SAVE">About</a> </p>
+    <p class="a" style="font-size:25px;margin-top: 0px;color:#5AA897;"><a style="color:#FAF3F3;overflow: hidden;text-decoration: none;" href="works.html">Work</a></p>
+    <p class="b" style="font-size:25px;margin-top: 0px;padding-right: 0px;color:#FF8882;"><a style="color:#FAF3F3;overflow: hidden;text-decoration: none;" href="notes.html"> Notes</a></p>
+<img src="https://web.archive.org/web/20180819202235js_/http://seanhalpin.io/assets/img/content/home/hello/me.svg" style="width: 110px;padding-top: 300‒;padding-top: 10px;padding-right: 615px;padding-left: 110px;">
+
+
+
+</header>
+
+<center>
+    <p style="color:#F47C7C;font-size:30px;">Haven't done this part yet! Will do soon! </p>
+    <p style="color:#F47C7C;font-size:19px;"> Stay tuned for the complete version</p>
+    <img src="/images/200.webp">
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
